@@ -3,6 +3,10 @@ body, html {
     margin: 0;
     padding: 0;
     font-family: 'Montserrat', sans-serif;
+    background: #dad299; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #dad299, #b0dab9); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #dad299, #b0dab9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background-size: cover;
 }
 
 .no-padding {
@@ -77,6 +81,8 @@ a:visited {
     margin: 0 auto;
 }
 
+
+
 .fa-linkedin-in,
 .fa-github-alt,
 .fa-chevron-down,
@@ -84,9 +90,13 @@ a:visited {
     color: black;
 }
 
+.work {
+    border-bottom: 1px solid rgb(141, 141, 141);
+}
+
 footer {
     font-size: .85em;
-    border-top: 1px solid rgb(202, 202, 202);
+    border-top: 1px solid rgb(141, 141, 141);
     padding-top: 10px;
 }
 

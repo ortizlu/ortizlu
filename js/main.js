@@ -1,11 +1,7 @@
-// const seeWork = document.querySelector('button');
-// seeWork.addEventListener('click', function(){
-//     scrollWin();
-// });
+$(".btn").mouseup(function(){
+  $(this).blur();
+})
 
-// function scrollWin() {
-//     window.scrollBy(0, 100);
-// }
 
 $(document).ready(function(){
     // Add smooth scrolling to all links
