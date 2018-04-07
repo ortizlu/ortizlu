@@ -5,8 +5,9 @@ body, html {
     font-family: 'Montserrat', sans-serif;
     background: #dad299; /* fallback for old browsers */
   background: -webkit-linear-gradient(to right, #fff6b1, #b0dab9); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #fffef9, #fffff8); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(to right, #c4dbdd, rgb(232, 252, 252)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   background-size: cover;
+  color: rgb(35, 59, 59);
 }
 
 .no-padding {
@@ -84,13 +85,17 @@ a:visited {
     margin: 0 auto;
 }
 
-
+.center-block {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
 
 .fa-linkedin-in,
 .fa-github-alt,
 .fa-chevron-down,
 .black {
-    color: black;
+    color:rgb(35, 59, 59);
 }
 
 .work {
@@ -113,9 +118,16 @@ footer {
     width: 100%;
 }
 
+.work-image {
+  width: auto ;
+  max-width: 100% ;
+  height: auto ;
+}
+
 @media (min-width: 992px) {
 .work {
     height: 100vh;
 }
+
 
 }
