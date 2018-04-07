@@ -5,9 +5,9 @@ body, html {
     font-family: 'Montserrat', sans-serif;
     background: #dad299; /* fallback for old browsers */
   background: -webkit-linear-gradient(to right, #fff6b1, #b0dab9); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #a8b9bb, rgb(182, 197, 197)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(to right, #b3c5c7, rgb(199, 216, 216)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   background-size: cover;
-  color: rgb(35, 59, 59);
+  color: rgb(44, 75, 75);
 }
 
 .no-padding {
@@ -104,6 +104,7 @@ a:visited {
 
 .me {
   border: 1px solid rgba(141, 141, 141, .7);
+  max-width: 40px;
 }
 
 footer {
@@ -133,9 +134,18 @@ footer {
     height: 100vh;
 }
 
+.me {
+  max-width: 500px;
+}
+
 .work-vertical-space {
   margin-top: 150px;
   margin-bottom: 150px;
+}
+
+.work-vertical-space-less-mb {
+  margin-top: 150px;
+  margin-bottom: 120px;
 }
 
 }
