@@ -1,3 +1,5 @@
+alert("Welcome! This site is currently under construction. You're welcome to browse around but also please check back when it is open for business!")
+
 $(".btn").mouseup(function(){
   $(this).blur();
 })
