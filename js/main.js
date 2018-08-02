@@ -1,4 +1,4 @@
-alert("Welcome! This site is currently under construction. You're welcome to browse around but also please check back when it is open for business!")
+
 
 $(".btn").mouseup(function(){
   $(this).blur();
@@ -29,9 +29,16 @@ $(document).ready(function(){
     });
   });
 
+  $(function() {
+    $('nav:nth-child(3)').each(function() {
+     this.href = this.href.replace('(at)', '@').replace(/\(dot\)/g, '.');
+     // Remove this line if you don't want to set the email address as link text:
+    });
+   });
+
 
   $(function() {
-    $('a[href^="mailto:"]').each(function() {
+    $('.mailto').each(function() {
      this.href = this.href.replace('(at)', '@').replace(/\(dot\)/g, '.');
      // Remove this line if you don't want to set the email address as link text:
      this.innerHTML = this.href.replace('mailto:', '');
