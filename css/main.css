@@ -12,7 +12,7 @@ body {
   color: rgb(44, 75, 75);
 }
 
-.no-touchevents a:hover {
+a:hover {
   opacity: .5;
   text-decoration: none;
 }
