@@ -1,118 +1,199 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="utf-8"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Luis A Ortiz | Welcome!</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" media="screen" href="./css/main.css"/>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
-    <link rel="shortcut icon" href="img/favicon.ico"/>
+  <!-- layout inspired by Miro Karilahti https://codepen.io/miroot/pen/YXpOGG -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Luis A. Ortiz | Welcome!</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+  <link rel="shortcut icon" href="favicon.ico" />
+  <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
 </head>
+
 <body>
 
-  <header>
-    <h2><a href="#" class="luislogo">luis o.</a></h2>
-    <nav>
-      <ul class="header-content">
-        <li><a href="#about">About</a></li>
-        <li><a href="#work">Portfolio</a></li>
-        <li><a href="mailto:ortizlu(at)icloud(dot)com">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#"><label for="put-cards-down" class="logo">luis o.</label></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-  <section class="flex-hero" style="background-image: url(img/hero.jpg);">
-    <div class="hero-text">
-      <h1>Hello, I'm Luis Ortiz</h1>
-      <p>And I'm an Aspiring Web Developer</p>
-      <a href="#work" class='btn btn-success'>See My Work</a>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <label class="nav-link" for="toggle-card-5">About</label>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              Contact
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="https://www.linkedin.com/in/luis-a-ortiz-459475106/" target="_blank">LinkedIn</a>
+              <a class="dropdown-item" href="https://github.com/ortizlu" target="_blank">GitHub</a>
+              <a class="dropdown-item" href="mailto:ortizlu@icloud.com" target="_blank">Email</a>
+            </div>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              Projects
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <label class="dropdown-item" for="toggle-card-1">Space-Dash</label>
+              <label class="dropdown-item" for="toggle-card-2">StageBright</label>
+              <label class="dropdown-item" for="toggle-card-3">Chee-Yun</label>
+              <label class="dropdown-item" for="toggle-card-4">WOW-ISS</label>
+            </div>
+          </li>
+        </ul>
+      </div>
     </div>
-  </section>
+  </nav>
 
-  <!-- Start Work Content -->
-  <section id="work" class="work">
-    <h3 class="title">Portfolio</h3>
-    <ul class="grid">
-      <li>
-        <!-- <a href="http://chee-yun.com" class="devices responsive" target="blank"> -->
-          <img src="img/devices-chee-yun.png" class="devices responsive" alt="Project 1 on 3 screen sizes">
-        <!-- </a> -->
-        <div class="description">
-          <h4><a class="description-title" href="http://chee-yun.com" target="blank">Chee-Yun.com</a></h4>
-          <p>The website created for world-renowned violinist Chee-Yun.</p>
-          <h5>What I Used</h5>
-          <p><img class="logos" src="img/logos/boostrap.png" alt="bootstrap logo"><img class="logos" src="img/logos/kisspng-web-development-jquery-ui-javascript-computer-icon-jqlogo-5ae94a5d86de89.8903081715252383655524.png" alt="jquery logo"><img class="logos" src="img/logos/js.png" alt="js logo"></p>
-        </div>
-      </li>
-
-    </ul>
-  </section>
-
-  <section id="work" class="work">
-    <ul class="grid">
-      <li>
-          <img src="img/space-dash.png" class="devices responsive" alt="Project 2 on only 1 screen size">
-        <!-- </a> -->
-        <div class="description">
-          <h4><a class="description-title" href="http://ortizlu.com/space-dash" target="blank">Space Dash</a></h4>
-          <p>A fun little game made with HTML, CSS, and Javascript, along with a library <br>called Typed.JS.</p>
-          <h5>What I Used</h5>
-          <p><img class="logos" src="img/logos/js.png" alt="js logo"></p>
-        </div>
-      </li>
-
-    </ul>
-  </section>
-
-  <!-- Start About Content -->
-  <section id="about" class="about">
-    <h3 class='text-center'>About Me</h3>
-    <img class="me rounded-circle responsive" src="img/me.jpg" alt="photo of Luis">
-    <p class="me-bio">
-    My name is Luis and I’m a front-end developer from the Washington DC area. I graduated from George Mason University with a Bachelor of Science in Information Systems and Operations Management. I loved learning about the business-side of technology, but was disappointed with the amount of programming I learned. A few weeks after graduation, I made the leap to teach myself how to code. After 5 months of self-teaching, I decided to embark in General Assembly's Web Development Immersive Program. After the program I will be in search of a front-end web developer position in the DC area. When I’m not programming, I love spending time with my wife, eating, reading, and getting a workout at the gym.</p>
-  </section>
-  <!-- End About Content -->
+  <div class="page-title">
+    <h1>Hello, I'm Luis Ortiz <br>
+      And I'm a Full-Stack Web Developer <br>
+    </h1>
+    <label for="toggle-card-1" class="btn">See my projects!</label>
+  </div>
 
 
-  <!-- start footer -->
-  <footer id="contact" class='text-center'>
-    <div class="social">
-      <a href="https://github.com/ortizlu" target="_blank">
-        <i class="fab fa-github-alt fa-2x col-centered"></i>
-      </a>
-      <a href="https://www.linkedin.com/in/luis-a-ortiz-459475106/" target="_blank">
-        <i class="fab fa-linkedin-in fa-2x ml-3"></i>
-      </a>
+
+  <input type="radio" name="cards" class="card-checkbox" id="toggle-card-1">
+
+  <div class="card space-dash">
+    <h3>Space-Dash</h3>
+    <details>
+      <summary>A fun card game about the cold war, spaceships, and blowing your enemies spaceships up!</summary>
+      <p>Made with HTML, CSS, and Javascript (ReactJS), along with a library called Typed.JS.</p>
+    </details>
+    <p class="description-desktop">A fun card game about the cold war, spaceships, and blowing your enemies spaceships
+      up! Made with HTML, CSS, and Javascript (ReactJS), along with a library called Typed.JS.</p>
+    <h4>Technologies used</h4>
+    <div class="technologies-container">
+      <a href="https://reactjs.org/" target="_blank"><img class="technologies" src="logos/react.png"></a>
     </div>
-    <div class="email">
-      <h6>Contact Me!</h6>
-      <a class="mailto" href="mailto:ortizlu(at)icloud(dot)com">ortizlu at icloud dot com</a>
+    <div class="btn-controls">
+      <a class="btn-external" href="http://ortizlu.com/Space-Dash/" target="_blank">View</a>
+      <label class="btn-next" for="toggle-card-2">Next</label>
     </div>
-    <div>
-    <p>Copyright Luis A. Ortiz © 2018</p>
-    <p class="credits">Mockups created using 24 Free Flat Vector <br> Apple Device Mockups from <a href='http://zippypixels.com/'>ZippyPixels.com</a></p>
+  </div>
+
+
+  <input type="radio" name="cards" class="card-checkbox" id="toggle-card-2">
+
+  <div class="card stagebright">
+    <h3>StageBright</h3>
+    <details>
+      <summary>StageBright is a full-screen "instagram-like" hub where users can upload pictures</summary>
+      <p>(or other media planned for a future release) and see other people's work in their feed.</p>
+    </details>
+    <p class="description-desktop">StageBright is a full-screen "instagram-like" hub where users can upload pictures
+      (or other media planned for a future release) and see other people's work in their feed.</p>
+    <h4>Technologies used</h4>
+    <div class="technologies-container">
+      <a href="https://www.mongodb.com/" target="_blank"><img class="technologies" src="logos/mongo.png"></a>
+      <a href="https://expressjs.com/" target="_blank"><img class="technologies" src="logos/express.png"></a>
+      <a href="https://vuejs.org/" target="_blank"><img class="technologies" src="logos/vue.png"></a>
+      <a href="https://nodejs.org/en/" target="_blank"><img class="technologies" src="logos/node.png"></a>
+      <a href="https://aws.amazon.com/" target="_blank"><img class="technologies" src="logos/aws.svg"></a>
     </div>
-  </footer>
-  <!--end footer -->
-
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-120625915-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-120625915-1');
-</script>
+    <div class="btn-controls">
+      <a class="btn-external" href="https://stagebright.herokuapp.com/" target="_blank">View</a>
+      <label class="btn-next" for="toggle-card-3">Next</label>
+    </div>
+  </div>
 
 
-  <!-- jQuery and JS file-->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="./js/main.js"></script>
+  <input type="radio" name="cards" class="card-checkbox" id="toggle-card-3">
+
+  <div class="card chee-yun">
+    <h3>Chee-Yun</h3>
+    <p>The website created for world-renowned violinist Chee-Yun.</p>
+    <h4>Technologies used</h4>
+    <div class="technologies-container">
+      <a href="https://getbootstrap.com/" target="_blank"><img class="technologies" src="logos/boostrap.png"></a>
+      <a href="https://jquery.com/" target="_blank"><img class="technologies" src="logos/jquery.png"></a>
+      <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank"><img class="technologies" src="logos/js.png"></a>
+    </div>
+    <div class="btn-controls">
+      <a class="btn-external" href="http://www.chee-yun.net/" target="_blank">View</a>
+      <label class="btn-next" for="toggle-card-4">Next</label>
+    </div>
+  </div>
+
+
+  <input type="radio" name="cards" class="card-checkbox" id="toggle-card-4">
+
+  <div class="card wow-iss">
+    <h3>WOW-ISS</h3>
+    <details>
+      <summary>This is a project created in collaboration with <a href="https://github.com/ntartaro" target="_blank">Nick
+          Tartaro</a></summary>
+      <p> where we
+        used the International Space Station's and Google Maps' API in order to track the current location of the ISS.
+        Users can log in, add their favorite locations, and see how far the ISS is is from their saved locations</p>
+    </details>
+    <p class="description-desktop">This is a project created in collaboration with <a href="https://github.com/ntartaro"
+        target="_blank">Nick
+        Tartaro</a>where we
+      used the International Space Station's and Google Maps' API in order to track the current location of the ISS.
+      Users can log in, add their favorite locations, and see how far the ISS is is from their saved locations</p>
+    <h4>Technologies used</h4>
+    <div class="technologies-container">
+      <a href="https://www.mongodb.com/" target="_blank"><img class="technologies" src="logos/mongo.png"></a>
+      <a href="https://expressjs.com/" target="_blank"><img class="technologies" src="logos/express.png"></a>
+      <a href="https://reactjs.org/" target="_blank"><img class="technologies" src="logos/react.png"></a>
+      <a href="https://nodejs.org/en/" target="_blank"><img class="technologies" src="logos/node.png"></a>
+    </div>
+    <div class="btn-controls">
+      <a class="btn-external" href="http://wow-iss.surge.sh/" target="_blank">View</a>
+      <label class="btn-next" for="toggle-card-5">About Me</label>
+    </div>
+  </div>
+
+  <input type="radio" name="cards" class="card-checkbox" id="toggle-card-5">
+
+  <div class="card">
+    <h3>About Me</h3>
+    <p class="about-me">Hello! My name is Luis. I graduated
+      from GMU with a
+      Bachelors in Information Systems. I loved learning about
+      the business-side of technology, but was disappointed with the amount of coding I learned. A few weeks after
+      graduation, I decided to teach myself how to code. After 6 months of self-teaching, I embarked in
+      General Assembly's Web Development Immersive Program for 3 more months. I will be completing the program on
+      November 16, 2018 and afterwards will be in search of a Web
+      developer position in the DC area. When I’m not coding, I love spending time with my wife, spending time
+      with friends, playing guitar, reading,
+      and getting a workout at the gym.
+      <div class="btn-controls"><a class="btn-external" href="resume.pdf" download>Download Resume</a></div><br><br><br><br><br><br><br></p>
+  </div>
+
+
+  <input type="radio" name="cards" class="card-checkbox" id="put-cards-down">
+
 </body>
+
 </html>
