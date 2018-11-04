@@ -23,7 +23,7 @@ a:hover {
 }
 
 a:visited {
-  color: rgb(190, 190, 190);
+  color: white;
   text-decoration: none;
 }
 
@@ -91,6 +91,7 @@ h4 {
 .about-me {
   font-size: 0.8rem;
   overflow: scroll;
+  margin-top: 20px;
 }
 
 .card {
@@ -253,6 +254,7 @@ h4 {
 
 .btn-external {
   margin: 0 auto;
+  color: white;
   margin-top: 10px;
   background-color: #4aac4a;
   font-weight: bold;
