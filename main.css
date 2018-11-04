@@ -89,7 +89,7 @@ h4 {
   -webkit-transform: rotate(-2deg);
   transform: rotate(-2deg) translateX(-50%);
   z-index: -3;
-  background-color: #ddd;
+  /* background-color: #ddd; */
   color: #181818;
   box-shadow: 0 0 16px rgba(0, 0, 0, 0.25);
   transition: all .75s;
@@ -140,6 +140,11 @@ h4 {
   background-position: center center;
 }
 
+
+.me {
+  background-color: #5c5b5b;
+}
+
 .technologies-container {
   display: flex;
   justify-content: center;
@@ -156,7 +161,7 @@ h4 {
   -webkit-transform: rotate(2deg);
   transform: rotate(2deg) translateX(-50%);
   z-index: 2;
-  background-color: #fcfaf1;
+  /* background-color: #fcfaf1; */
 }
 
 .card-checkbox:nth-of-type(2)+.card,
@@ -165,7 +170,7 @@ h4 {
   z-index: 1;
   -webkit-transform: rotate(0);
   transform: rotate(0) translateX(-50%);
-  background-color: #eee;
+  /* background-color: #eee; */
 }
 
 .card-checkbox:checked+.card {
@@ -173,7 +178,7 @@ h4 {
   -webkit-transform: rotate(0) translateX(-50%);
   transform: rotate(0) translateX(-50%);
   top: 70%;
-  background-color: #fff;
+  /* background-color: #fff; */
   z-index: -2;
 }
 
@@ -267,7 +272,7 @@ h4 {
 }
 
 
-@media only screen and (min-height: 650px) {
+@media only screen and (min-height: 750px) {
 
   .description {
     display: block;
@@ -282,7 +287,7 @@ h4 {
     -webkit-transform: rotate(0) translateX(-50%);
     transform: rotate(0) translateX(-50%);
     top: 50%;
-    background-color: #fff;
+    /* background-color: #fff; */
   }
 
 
@@ -318,7 +323,7 @@ h4 {
 
 @media only screen and (min-width: 950px) {
   .card {
-    padding: 0 140px;
+    padding: 0 120px;
     padding-top: 60px;
     font-size: 1.2rem;
     width: 60%;
