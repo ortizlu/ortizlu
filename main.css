@@ -150,6 +150,12 @@ h4 {
   background-position: center center;
 }
 
+.ateball {
+  background-image: url('ateball.png');
+  background-size: cover;
+  background-position: center center;
+}
+
 .me {
   background-color: #5c5b5b;
   background-image: url('computer.jpg');

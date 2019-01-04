@@ -8,7 +8,9 @@ let cheeYun = document.querySelector('#toggle-card-3');
 let cheeYunCard = document.querySelector('.chee-yun');
 let wowISS = document.querySelector('#toggle-card-4');
 let wowISSCard = document.querySelector('.wow-iss');
-let resume = document.querySelector('#toggle-card-5');
+let ateball = document.querySelector('#toggle-card-5');
+let ateballCard = document.querySelector('.ateball');
+let resume = document.querySelector('#toggle-card-6');
 let resumeCard = document.querySelector('.me');
 
 //collapses upon click
@@ -86,6 +88,22 @@ wowISSCard.addEventListener('click', e => {
 wowISS.addEventListener('change', () => {
   if (wowISS.checked) {
     resumeCard.style.zIndex = '6';
+  }
+});
+
+ateballCard.addEventListener('click', e => {
+  e.stopPropagation();
+  resume.checked = true;
+  resumeCard.style.zIndex = '6';
+  spaceDashCard.style.zIndex = '5';
+  wowISSCard.style.zIndex = '4';
+  cheeYunCard.style.zIndex = '3';
+  stageBrightCard.style.zIndex = '2';
+});
+
+ateball.addEventListener('change', () => {
+  if (resume.checked) {
+    ateballCard.style.zIndex = '6';
   }
 });
 
