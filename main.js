@@ -14,14 +14,6 @@ let resume = document.querySelector('#toggle-card-6');
 let resumeCard = document.querySelector('.me');
 
 let triggers = document.querySelectorAll('[data-cardid]');
-let cards = [
-  spaceDashCard,
-  stageBrightCard,
-  cheeYunCard,
-  wowISSCard,
-  ateballCard,
-  resumeCard
-];
 
 //collapses upon click
 const collapseNav = function() {
@@ -45,6 +37,7 @@ html.addEventListener('click', e => {
   }
 });
 
+//add event listeners to raise each card, and position the rest according to their z-index
 for (let i = 0; i < triggers.length; i++) {
   triggers[i].addEventListener('click', e => {
     switch (e.target.dataset.cardid) {
