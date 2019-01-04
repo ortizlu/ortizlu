@@ -53,8 +53,15 @@ h4 {
 }
 
 .description {
-  overflow-y: scroll;
+  overflow: hidden;
   max-height: 100px;
+}
+
+.description-inner {
+  height: 100%;
+  margin-right: -50px;
+  padding-right: 50px;
+  overflow-y: scroll;
 }
 
 .logo {
@@ -180,6 +187,10 @@ h4 {
 }
 
 #self-portrait {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 30px;
   border-radius: 50%;
   max-width: 140px;
 }
