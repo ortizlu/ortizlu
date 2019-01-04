@@ -130,16 +130,18 @@
                 Projects
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <label class="dropdown-item" for="toggle-card-1"
+                <label data-cardid="1" class="dropdown-item" for="toggle-card-1"
                   >Space-Dash</label
                 >
-                <label class="dropdown-item" for="toggle-card-2"
+                <label data-cardid="2" class="dropdown-item" for="toggle-card-2"
                   >StageBright</label
                 >
-                <label class="dropdown-item" for="toggle-card-3"
+                <label data-cardid="3" class="dropdown-item" for="toggle-card-3"
                   >Chee-Yun</label
                 >
-                <label class="dropdown-item" for="toggle-card-4">WOW-ISS</label>
+                <label data-cardid="4" class="dropdown-item" for="toggle-card-4"
+                  >WOW-ISS</label
+                >
               </div>
             </li>
           </ul>
@@ -152,13 +154,15 @@
         Hello, I'm Luis Ortiz <br />
         And I'm a Full-Stack Web Developer <br />
       </h1>
-      <label for="toggle-card-1" class="btn">See my projects!</label>
+      <label data-cardid="1" for="toggle-card-1" class="btn"
+        >See my projects!</label
+      >
     </div>
 
     <input type="radio" name="cards" class="card-checkbox" id="toggle-card-1" />
 
     <div class="card space-dash">
-      <label for="toggle-card-1"> <h3>Space-Dash</h3> </label>
+      <label data-cardid="1" for="toggle-card-1"> <h3>Space-Dash</h3> </label>
       <p class="description">
         A fun card game about the cold war, spaceships, and blowing your enemies
         spaceships up! Made with HTML, CSS, and Javascript (ReactJS), along with
@@ -178,14 +182,14 @@
           target="_blank"
           >View</a
         >
-        <label class="btn-next" for="toggle-card-2">Next</label>
+        <label data-cardid="2" class="btn-next" for="toggle-card-2">Next</label>
       </div>
     </div>
 
     <input type="radio" name="cards" class="card-checkbox" id="toggle-card-2" />
 
     <div class="card stagebright">
-      <label for="toggle-card-2"> <h3>StageBright</h3> </label>
+      <label data-cardid="2" for="toggle-card-2"> <h3>StageBright</h3> </label>
       <p class="description">
         StageBright is a full-screen "instagram-like" hub where users can upload
         pictures (or other media planned for a future release) and see other
@@ -210,21 +214,21 @@
         /></a>
       </div>
       <div class="btn-controls">
-        <label class="btn-next" for="toggle-card-1">Back</label>
+        <label data-cardid="1" class="btn-next" for="toggle-card-1">Back</label>
         <a
           class="btn-external"
           href="https://stagebright.herokuapp.com/"
           target="_blank"
           >View</a
         >
-        <label class="btn-next" for="toggle-card-3">Next</label>
+        <label data-cardid="3" class="btn-next" for="toggle-card-3">Next</label>
       </div>
     </div>
 
     <input type="radio" name="cards" class="card-checkbox" id="toggle-card-3" />
 
     <div class="card chee-yun">
-      <label for="toggle-card-3"> <h3>Chee-Yun</h3> </label>
+      <label data-cardid="3" for="toggle-card-3"> <h3>Chee-Yun</h3> </label>
       <p>The website created for world-renowned violinist Chee-Yun.</p>
       <h4>Technologies used</h4>
       <div class="technologies-container">
@@ -244,18 +248,18 @@
         /></a>
       </div>
       <div class="btn-controls">
-        <label class="btn-next" for="toggle-card-2">Back</label>
+        <label data-cardid="2" class="btn-next" for="toggle-card-2">Back</label>
         <a class="btn-external" href="http://www.chee-yun.net/" target="_blank"
           >View</a
         >
-        <label class="btn-next" for="toggle-card-4">Next</label>
+        <label data-cardid="4" class="btn-next" for="toggle-card-4">Next</label>
       </div>
     </div>
 
     <input type="radio" name="cards" class="card-checkbox" id="toggle-card-4" />
 
     <div class="card wow-iss">
-      <label for="toggle-card-4"> <h3>WOW-ISS</h3> </label>
+      <label data-cardid="4" for="toggle-card-4"> <h3>WOW-ISS</h3> </label>
       <p class="description">
         This is a project created in collaboration with
         <a href="https://github.com/ntartaro" target="_blank">Nick Tartaro</a>
@@ -280,18 +284,18 @@
         /></a>
       </div>
       <div class="btn-controls">
-        <label class="btn-next" for="toggle-card-3">Back</label>
+        <label data-cardid="3" class="btn-next" for="toggle-card-3">Back</label>
         <a class="btn-external" href="http://wow-iss.surge.sh/" target="_blank"
           >View</a
         >
-        <label class="btn-next" for="toggle-card-5">Next</label>
+        <label data-cardid="5" class="btn-next" for="toggle-card-5">Next</label>
       </div>
     </div>
 
     <input type="radio" name="cards" class="card-checkbox" id="toggle-card-5" />
 
     <div class="card ateball">
-      <label for="toggle-card-5"> <h3>Ateball</h3> </label>
+      <label data-cardid="5" for="toggle-card-5"> <h3>Ateball</h3> </label>
       <p class="description">
         This is a project created in collaboration with
         <a href="https://github.com/ntartaro" target="_blank">Juan Baires</a>
@@ -316,18 +320,20 @@
         /></a>
       </div>
       <div class="btn-controls">
-        <label class="btn-next" for="toggle-card-3">Back</label>
+        <label data-cardid="4" class="btn-next" for="toggle-card-4">Back</label>
         <a class="btn-external" href="http://ateball.surge.sh/" target="_blank"
           >View</a
         >
-        <label class="btn-next" for="toggle-card-6">About Me</label>
+        <label data-cardid="6" class="btn-next" for="toggle-card-6"
+          >About Me</label
+        >
       </div>
     </div>
 
     <input type="radio" name="cards" class="card-checkbox" id="toggle-card-6" />
 
     <div class="card me">
-      <label for="toggle-card-6"> <h3>About Me</h3> </label>
+      <label data-cardid="6" for="toggle-card-6"> <h3>About Me</h3> </label>
       <div class="btn-controls">
         <a class="btn-external btn-resume" href="Ortiz_Luis_Resume.pdf" download
           >Download Resume</a

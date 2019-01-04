@@ -13,6 +13,9 @@ let ateballCard = document.querySelector('.ateball');
 let resume = document.querySelector('#toggle-card-6');
 let resumeCard = document.querySelector('.me');
 
+let cards = document.querySelectorAll('.card');
+let labels = document.querySelectorAll('label');
+
 //collapses upon click
 const collapseNav = function() {
   $('.navbar-collapse').collapse('hide');
@@ -34,6 +37,21 @@ html.addEventListener('click', e => {
     resumeCard.style.zIndex = '2';
   }
 });
+
+for (let i = 0; i < cards.length; i++) {
+  cards[i].addEventListener('click', e => {
+    let cardName = e.target.classList[1];
+    console.log(cardName);
+  });
+}
+
+for (let i = 0; i < labels.length; i++) {
+  labels[i].addEventListener('click', e => {
+    let cardID = e.target.getAttribute('for');
+    console.log(cardID);
+    console.log(e.target.dataset.cardid);
+  });
+}
 
 spaceDashCard.addEventListener('click', () => {
   spaceDash.checked = true;
@@ -78,7 +96,7 @@ cheeYun.addEventListener('change', () => {
 wowISSCard.addEventListener('click', e => {
   e.stopPropagation();
   wowISS.checked = true;
-  resumeCard.style.zIndex = '6';
+  ateballCard.style.zIndex = '6';
   spaceDashCard.style.zIndex = '5';
   stageBrightCard.style.zIndex = '4';
   cheeYunCard.style.zIndex = '3';
