@@ -88,7 +88,7 @@ nav {
 /* CARD STYLES */
 .card {
   box-sizing: border-box;
-  position: absolute;
+  position: fixed;
   padding: 5px;
   top: 85%;
   left: 50%;
