@@ -53,6 +53,7 @@ h4 {
 }
 
 .description {
+  width: 90%;
   overflow: hidden;
   max-height: 100px;
 }
@@ -186,7 +187,7 @@ h4 {
   margin: 0 5px;
 }
 
-#self-portrait {
+.self-portrait {
   display: block;
   margin: 0 auto;
   text-align: center;
@@ -200,7 +201,6 @@ h4 {
   -webkit-transform: rotate(2deg);
   transform: rotate(2deg) translateX(-50%);
   z-index: 2;
-  /* background-color: #fcfaf1; */
 }
 
 .card-checkbox:nth-of-type(2)+.card,
@@ -209,7 +209,6 @@ h4 {
   z-index: 1;
   -webkit-transform: rotate(0);
   transform: rotate(0) translateX(-50%);
-  /* background-color: #eee; */
 }
 
 .card-checkbox:checked+.card {
@@ -217,11 +216,10 @@ h4 {
   -webkit-transform: rotate(0) translateX(-50%);
   transform: rotate(0) translateX(-50%);
   top: 70%;
-  /* background-color: #fff; */
   z-index: -2;
 }
 
-/* OVERRIDING BOOTSTRAP STYLES */
+/* NAVBAR STYLES */
 .navbar {
   position: absolute;
   top: 0;
