@@ -45,62 +45,62 @@ html.addEventListener('click', e => {
   }
 });
 
-//add event listeners to raise each card, and position the rest according to their z-index
-// for (let i = 0; i < triggers.length; i++) {
-//   triggers[i].addEventListener('click', e => {
-//     switch (e.target.dataset.cardid) {
-//       case '1':
-//         spaceDash.checked = true;
-//         stageBrightCard.style.zIndex = '6';
-//         cheeYunCard.style.zIndex = '5';
-//         wowISSCard.style.zIndex = '4';
-//         ateballCard.style.zIndex = '3';
-//         resumeCard.style.zIndex = '2';
-//         break;
-//       case '2':
-//         stageBright.checked = true;
-//         cheeYunCard.style.zIndex = '6';
-//         wowISSCard.style.zIndex = '5';
-//         ateballCard.style.zIndex = '4';
-//         resumeCard.style.zIndex = '3';
-//         spaceDashCard.style.zIndex = '2';
-//         break;
-//       case '3':
-//         cheeYun.checked = true;
-//         wowISSCard.style.zIndex = '6';
-//         ateballCard.style.zIndex = '5';
-//         resumeCard.style.zIndex = '4';
-//         spaceDashCard.style.zIndex = '3';
-//         stageBrightCard.style.zIndex = '2';
-//         break;
-//       case '4':
-//         wowISS.checked = true;
-//         ateballCard.style.zIndex = '6';
-//         resumeCard.style.zIndex = '5';
-//         spaceDashCard.style.zIndex = '4';
-//         stageBrightCard.style.zIndex = '3';
-//         cheeYunCard.style.zIndex = '2';
-//         break;
-//       case '5':
-//         ateball.checked = true;
-//         resumeCard.style.zIndex = '6';
-//         spaceDashCard.style.zIndex = '5';
-//         stageBrightCard.style.zIndex = '4';
-//         cheeYunCard.style.zIndex = '3';
-//         wowISSCard.style.zIndex = '2';
-//         break;
-//       case '6':
-//         resume.checked = true;
-//         spaceDashCard.style.zIndex = '6';
-//         stageBrightCard.style.zIndex = '5';
-//         cheeYunCard.style.zIndex = '4';
-//         wowISSCard.style.zIndex = '3';
-//         ateballCard.style.zIndex = '2';
-//         break;
-//       default:
-//     }
-//   });
-// }
+// add event listeners to raise each card, and position the rest according to their z-index
+for (let i = 0; i < triggers.length; i++) {
+  triggers[i].addEventListener('click', e => {
+    switch (e.target.dataset.cardid) {
+      case '1':
+        spaceDash.checked = true;
+        stageBrightCard.style.zIndex = '6';
+        cheeYunCard.style.zIndex = '5';
+        wowISSCard.style.zIndex = '4';
+        ateballCard.style.zIndex = '3';
+        resumeCard.style.zIndex = '2';
+        break;
+      case '2':
+        stageBright.checked = true;
+        cheeYunCard.style.zIndex = '6';
+        wowISSCard.style.zIndex = '5';
+        ateballCard.style.zIndex = '4';
+        resumeCard.style.zIndex = '3';
+        spaceDashCard.style.zIndex = '2';
+        break;
+      case '3':
+        cheeYun.checked = true;
+        wowISSCard.style.zIndex = '6';
+        ateballCard.style.zIndex = '5';
+        resumeCard.style.zIndex = '4';
+        spaceDashCard.style.zIndex = '3';
+        stageBrightCard.style.zIndex = '2';
+        break;
+      case '4':
+        wowISS.checked = true;
+        ateballCard.style.zIndex = '6';
+        resumeCard.style.zIndex = '5';
+        spaceDashCard.style.zIndex = '4';
+        stageBrightCard.style.zIndex = '3';
+        cheeYunCard.style.zIndex = '2';
+        break;
+      case '5':
+        ateball.checked = true;
+        resumeCard.style.zIndex = '6';
+        spaceDashCard.style.zIndex = '5';
+        stageBrightCard.style.zIndex = '4';
+        cheeYunCard.style.zIndex = '3';
+        wowISSCard.style.zIndex = '2';
+        break;
+      case '6':
+        resume.checked = true;
+        spaceDashCard.style.zIndex = '6';
+        stageBrightCard.style.zIndex = '5';
+        cheeYunCard.style.zIndex = '4';
+        wowISSCard.style.zIndex = '3';
+        ateballCard.style.zIndex = '2';
+        break;
+      default:
+    }
+  });
+}
 
 // for (let i = 0; i < cards.length; i++) {
 //   let mc = new Hammer(cards[i]);
