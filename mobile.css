@@ -3,6 +3,7 @@
 html {
   font-size: 10px;
   height: 100vh;
+  position: fixed;
 }
 
 body {
