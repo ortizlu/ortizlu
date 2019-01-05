@@ -3,7 +3,7 @@
 html {
   font-size: 10px;
   height: 100vh;
-  position: sticky;
+  position: fixed;
 }
 
 body {
@@ -88,7 +88,7 @@ nav {
 /* CARD STYLES */
 .card {
   box-sizing: border-box;
-  position: fixed;
+  position: absolute;
   padding: 5px;
   top: 85%;
   left: 50%;
