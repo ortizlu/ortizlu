@@ -16,9 +16,9 @@
     crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
     crossorigin="anonymous"></script>
-  <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="mobile.css" />
   <script src="http://hammerjs.github.io/dist/hammer.min.js"></script>
-  <script src="main.js" defer></script>
+  <script src="mobile.js" defer></script>
   <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet" />
   <link rel="shortcut icon" href="favicon.ico" />
@@ -46,7 +46,7 @@
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
-      <label data-cardid="6" for="toggle-card-6" class="logo navbar-brand">luis o.</label>
+      <h1 data-cardid="6" class="logo navbar-brand">luis o.</h1>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -54,8 +54,7 @@
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <label data-cardid="6" class="nav-link" for="toggle-card-6">About</label>
+          <li class="nav-item nav-link" data-cardid="6">About
           </li>
 
           <li class="nav-item dropdown">
@@ -76,11 +75,11 @@
               Projects
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <label data-cardid="1" class="dropdown-item" for="toggle-card-1">Space-Dash</label>
-              <label data-cardid="2" class="dropdown-item" for="toggle-card-2">StageBright</label>
-              <label data-cardid="3" class="dropdown-item" for="toggle-card-3">Chee-Yun</label>
-              <label data-cardid="4" class="dropdown-item" for="toggle-card-4">WOW-ISS</label>
-              <label data-cardid="5" class="dropdown-item" for="toggle-card-5">Ateball</label>
+              <p data-cardid="1" class="dropdown-item">Space-Dash</p>
+              <p data-cardid="2" class="dropdown-item">StageBright</p>
+              <p data-cardid="3" class="dropdown-item">Chee-Yun</p>
+              <p data-cardid="4" class="dropdown-item">WOW-ISS</p>
+              <p data-cardid="5" class="dropdown-item">Ateball</p>
             </div>
           </li>
         </ul>
@@ -93,10 +92,8 @@
       Hello, I'm Luis Ortiz <br />
       And I'm a Full-Stack Web Developer <br />
     </h1>
-    <label data-cardid="1" for="toggle-card-1" class="btn">See my projects!</label>
+    <button data-cardid="1" class="btn">See my projects!</button>
   </div>
-
-  <input type="radio" name="cards" class="card-checkbox" id="toggle-card-1" />
 
   <div data-cardid="1" class="card space-dash">
     <h3>Space-Dash</h3>
@@ -110,13 +107,11 @@
       <a href="https://reactjs.org/" target="_blank"><img class="technologies" src="logos/react.png" alt="react logo" /></a>
     </div>
     <div class="btn-controls">
-      <label class="btn-next" for="put-cards-down">&lt;</label>
+      <button class="btn-next">&lt;</button>
       <a class="btn-external" href="http://ortizlu.com/Space-Dash/" target="_blank">View</a>
-      <label data-cardid="2" class="btn-next" for="toggle-card-2">&gt;</label>
+      <button data-cardid="2" class="btn-next">&gt;</button>
     </div>
   </div>
-
-  <input type="radio" name="cards" class="card-checkbox" id="toggle-card-2" />
 
   <div data-cardid="2" class="card stagebright">
     <h3>StageBright</h3>
@@ -136,13 +131,11 @@
       <a href="https://aws.amazon.com/" target="_blank"><img class="technologies" src="logos/aws.svg" alt="aws logo" /></a>
     </div>
     <div class="btn-controls">
-      <label data-cardid="1" class="btn-next" for="toggle-card-1">&lt;</label>
+      <button data-cardid="1" class="btn-next">&lt;</button>
       <a class="btn-external" href="https://stagebright.herokuapp.com/" target="_blank">View</a>
-      <label data-cardid="3" class="btn-next" for="toggle-card-3">&gt;</label>
+      <button data-cardid="3" class="btn-next">&gt;</button>
     </div>
   </div>
-
-  <input type="radio" name="cards" class="card-checkbox" id="toggle-card-3" />
 
   <div data-cardid="3" class="card chee-yun">
     <h3>Chee-Yun</h3>
@@ -155,13 +148,11 @@
           alt="js logo" /></a>
     </div>
     <div class="btn-controls">
-      <label data-cardid="2" class="btn-next" for="toggle-card-2">&lt;</label>
+      <button data-cardid="2" class="btn-next">&lt;</button>
       <a class="btn-external" href="http://www.chee-yun.net/" target="_blank">View</a>
-      <label data-cardid="4" class="btn-next" for="toggle-card-4">&gt;</label>
+      <button data-cardid="4" class="btn-next">&gt;</button>
     </div>
   </div>
-
-  <input type="radio" name="cards" class="card-checkbox" id="toggle-card-4" />
 
   <div data-cardid="4" class="card wow-iss">
     <h3>WOW-ISS</h3>
@@ -183,13 +174,11 @@
       <a href="https://nodejs.org/en/" target="_blank"><img class="technologies" src="logos/node.png" alt="node logo" /></a>
     </div>
     <div class="btn-controls">
-      <label data-cardid="3" class="btn-next" for="toggle-card-3">&lt;</label>
+      <button data-cardid="3" class="btn-next">&lt;</button>
       <a class="btn-external" href="http://wow-iss.surge.sh/" target="_blank">View</a>
-      <label data-cardid="5" class="btn-next" for="toggle-card-5">&gt;</label>
+      <button data-cardid="5" class="btn-next">&gt;</button>
     </div>
   </div>
-
-  <input type="radio" name="cards" class="card-checkbox" id="toggle-card-5" />
 
   <div data-cardid="5" class="card ateball">
     <h3>Ateball</h3>
@@ -211,13 +200,11 @@
       <a href="https://nodejs.org/en/" target="_blank"><img class="technologies" src="logos/node.png" alt="node logo" /></a>
     </div>
     <div class="btn-controls">
-      <label data-cardid="4" class="btn-next" for="toggle-card-4">&lt;</label>
+      <button data-cardid="4" class="btn-next">&lt;</button>
       <a class="btn-external" href="http://ateball.surge.sh/" target="_blank">View</a>
-      <label data-cardid="6" class="btn-next" for="toggle-card-6">&gt;</label>
+      <button data-cardid="6" class="btn-next">&gt;</button>
     </div>
   </div>
-
-  <input type="radio" name="cards" class="card-checkbox" id="toggle-card-6" />
 
   <div data-cardid="6" class="card me">
     <h3>About Me</h3>
@@ -242,7 +229,6 @@
     </div>
   </div>
 
-  <input type="radio" name="cards" class="card-checkbox" id="put-cards-down" />
 </body>
 
 </html>
