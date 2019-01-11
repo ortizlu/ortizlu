@@ -1,5 +1,37 @@
 $primary: #1f1f1f;
 $whitish: rgb(253, 253, 253);
+
+
+@mixin for-phone-only {
+  @media (max-width: 599px) {
+    @content;
+  }
+}
+
+@mixin for-tablet-portrait-up {
+  @media (min-width: 600px) {
+    @content;
+  }
+}
+
+@mixin for-tablet-landscape-up {
+  @media (min-width: 900px) {
+    @content;
+  }
+}
+
+@mixin for-desktop-up {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin for-big-desktop-up {
+  @media (min-width: 1800px) {
+    @content;
+  }
+}
+
 /* HEADER STYLES */
 
 html,
@@ -286,13 +318,31 @@ header {
 .me-landscape {
   background-color: $whitish;
   background: url('../images/me-landscape.jpg');
-  height: 150px;
+  height: 175px;
   border: 0.25rem solid transparent;
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
   background-clip: padding-box;
+
+  @include for-tablet-portrait-up {
+    height: 250px;
+  }
+
+  @include for-tablet-landscape-up {
+    height: 300px;
+  }
+
+
+  @include for-desktop-up {
+    height: 350px;
+  }
+
+  @include for-big-desktop-up {
+    height: 400px;
+  }
 }
+
 
 .about-description {
   line-height: 1.6;
@@ -326,10 +376,26 @@ header {
 
 .carousel-cell {
   width: 100%;
-  height: 150px;
+  height: 175px;
   background-size: cover;
   background-position: center center;
   background-clip: padding-box;
+
+  @include for-tablet-portrait-up {
+    height: 250px;
+  }
+
+  @include for-tablet-landscape-up {
+    height: 300px;
+  }
+
+  @include for-desktop-up {
+    height: 350px;
+  }
+
+  @include for-big-desktop-up {
+    height: 400px;
+  }
 }
 
 //adds white space after picture
