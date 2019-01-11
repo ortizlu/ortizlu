@@ -89,7 +89,7 @@ var flkty = new Flickity('.main-carousel', {
   }
 });
 
-let projects = [
+let projectsObj = [
   {
     title:
       '<a href="http://ortizlu.com/Space-Dash/" target="_blank">Space-Dash</a>',
@@ -203,10 +203,10 @@ let projects = [
 ];
 
 function displayProjectInfo(index) {
-  projectTitle.innerHTML = projects[index].title;
-  projectDescription.innerHTML = projects[index].description;
+  projectTitle.innerHTML = projectsObj[index].title;
+  projectDescription.innerHTML = projectsObj[index].description;
   technologyContainer.innerHTML = '';
-  projects[index].images.map(logo => {
+  projectsObj[index].images.map(logo => {
     let el = document.createElement('img');
     el.setAttribute('alt', logo.alt);
     el.setAttribute('src', 'logos/' + logo.src);
@@ -216,7 +216,7 @@ function displayProjectInfo(index) {
 }
 
 function takeMeToLink(index) {
-  window.open(projects[index].link, '_blank');
+  window.open(projectsObj[index].link, '_blank');
 }
 
 flkty.on('change', function(index) {
