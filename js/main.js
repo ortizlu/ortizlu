@@ -5,8 +5,8 @@ let yearSpan = document.querySelector('.year');
 yearSpan.innerText = year;
 
 //MOBILE NAVBAR
-let hamburger = document.querySelector('.hamburger');
-let close = document.querySelector('.mobile-overlay .close');
+let burger = document.querySelector('.hamburger');
+let closeBtn = document.querySelector('.mobile-overlay .close');
 let mobileOverlay = document.querySelector('.mobile-overlay');
 let menuItems = document.querySelector('.menu-items');
 let body = document.querySelector('body');
@@ -38,14 +38,14 @@ function socialToggle(e) {
 }
 
 //on click of hamburger, menu pops from the side
-hamburger.addEventListener('click', openFunc);
+burger.addEventListener('click', openFunc);
 
 //close menu upon clicking the projects/about button
 projectsBtn.addEventListener('click', closeFunc);
 aboutBtn.addEventListener('click', closeFunc);
 
 //clicking the X button
-close.addEventListener('click', closeFunc);
+closeBtn.addEventListener('click', closeFunc);
 
 //clicking on social button
 social.addEventListener('click', socialToggle);
