@@ -100,6 +100,7 @@ header {
 .hamburger {
   margin-right: 1rem;
   margin-left: 30%;
+  cursor: pointer;
 }
 
 .hamburger .line {
@@ -199,18 +200,37 @@ header {
   }
 }
 
-.logo,
-.logo-desktop {
+.logo-mobile {
   font-family: 'Poiret One', Arial, Helvetica, sans-serif;
-  border: 1px solid $primary;
+  border: 5px solid #1f1f1f;
   padding: 0.5rem 0.8rem;
   font-size: 1.8rem;
+  position: relative;
 }
 
-.logo:hover,
-.logo:active {
+.logo-mobile:hover,
+.logo-mobile:active {
   background-color: $primary;
   color: $whitish;
+}
+
+.o-mobile {
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  border: 3px solid $primary;
+}
+
+.dot-mobile {
+  width: 0.8rem;
+  height: 0.8rem;
+  position: absolute;
+  left: 40%;
+  border: 1.5px solid $primary;
+  bottom: 12%;
+  border-radius: 50%;
+  display: inline-block;
 }
 
 //DESKTOP NAVBAR
@@ -227,10 +247,153 @@ header {
 }
 
 .social-btn-desktop {
+  position: relative;
   margin-left: 3.2rem;
+  cursor: pointer;
 }
-.menu-items-desktop {
+
+.social-btn-desktop:hover {
+  .hidden-social-menu {
+    visibility: visible;
+
+    .social-items-desktop::before {
+      visibility: visible;
+    }
+  }
+}
+
+.menu-btn-desktop {
+  position: relative;
   margin-right: 3.2rem;
+  cursor: pointer;
+}
+
+.menu-btn-desktop:hover {
+  .hidden-menu {
+    visibility: visible;
+
+    .menu-items-desktop::before {
+      visibility: visible;
+    }
+  }
+}
+
+//position the menu absolutely to the menu button
+.hidden-menu {
+  position: absolute;
+  right: 0;
+  bottom: -8rem;
+  visibility: hidden;
+}
+
+.hidden-social-menu {
+  position: absolute;
+  left: 0;
+  bottom: -11rem;
+  visibility: hidden;
+}
+
+//display the items inside the menu in flex and position relative so that we can style the triangle
+.menu-items-desktop {
+  display: flex;
+  flex-direction: column;
+  background-color: $primary;
+  position: relative;
+  transition: all 0.5s;
+
+  a {
+    color: $whitish;
+    width: 100%;
+    display: inline-block;
+  }
+}
+
+.menu-items-desktop::before {
+  content: '\a';
+  border-style: solid;
+  border-width: 0 10px 10px 10px;
+  border-color: transparent transparent $primary transparent;
+  position: absolute;
+  top: -10px;
+  right: 0;
+  transform: translateX(-50%);
+  transition: all 0.5s;
+  visibility: hidden;
+}
+
+.social-items-desktop {
+  display: flex;
+  flex-direction: column;
+  background-color: $primary;
+  position: relative;
+  transition: all 0.5s;
+
+  a {
+    color: $whitish;
+    width: 100%;
+    display: inline-block;
+  }
+}
+
+.social-items-desktop::before {
+  content: '\a';
+  border-style: solid;
+  border-width: 0 10px 10px 10px;
+  border-color: transparent transparent $primary transparent;
+  position: absolute;
+  top: -10px;
+  left: 1.6rem;
+  transform: translateX(-50%);
+  transition: all 0.5s;
+  visibility: hidden;
+}
+
+//making the buttons on the social hover menu align
+.email-btn-desktop {
+  margin: 1rem 1rem 0.5rem 1rem;
+}
+
+.linkedin-btn-desktop {
+  margin: 0.5rem 1rem 0.5rem 1rem;
+}
+
+.github-btn-desktop {
+  margin: 0.5rem 1rem 1rem 1rem;
+}
+
+.about-btn-desktop {
+  margin: 1rem 1rem 0.5rem 1rem;
+}
+
+.projects-btn-desktop {
+  margin: 0.5rem 1rem 1rem 1rem;
+}
+
+.logo-desktop {
+  font-family: 'Poiret One', Arial, Helvetica, sans-serif;
+  border: 6px solid $primary;
+  padding: 0.5rem 0.8rem;
+  font-size: 2.5rem;
+  position: relative;
+}
+
+.o-desktop {
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  border: 3px solid $primary;
+}
+
+.dot-desktop {
+  width: 0.8rem;
+  height: 0.8rem;
+  position: absolute;
+  left: 40%;
+  border: 1.5px solid $primary;
+  bottom: 12%;
+  border-radius: 50%;
+  display: inline-block;
 }
 
 //MAIN HERO
@@ -238,7 +401,7 @@ header {
 .header-text {
   margin: 1.6rem;
   line-height: 1.5;
-  color: black;
+  color: $primary;
   font-family: 'Antic Didone', 'Didot', serif;
   letter-spacing: 0.8px;
   text-align: center;
@@ -255,7 +418,7 @@ header {
     position: absolute;
     left: 0;
     display: block;
-    background: black;
+    background: $primary;
     -webkit-animation: underline 1s 0.5s forwards;
     animation: underline 1s 0.5s forwards;
   }
@@ -267,13 +430,13 @@ header {
       height: 2px;
       position: absolute;
       display: block;
-      background: black;
+      background: $primary;
     }
 
     100% {
       width: 100%;
       left: 0;
-      background: black;
+      background: $primary;
     }
   }
 
@@ -284,13 +447,13 @@ header {
       height: 2px;
       position: absolute;
       display: block;
-      background: black;
+      background: $primary;
     }
 
     100% {
       width: 100%;
       left: 0;
-      background: black;
+      background: $primary;
     }
   }
 }
@@ -447,6 +610,10 @@ header {
 .flickity-button:hover {
   background: rgba(0, 0, 0, 0);
   cursor: pointer;
+}
+
+.project-title {
+  letter-spacing: 0.2rem;
 }
 
 .project-description {

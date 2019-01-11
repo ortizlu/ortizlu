@@ -49,7 +49,7 @@
 <body>
   <header>
     <div class="mobile-navbar">
-      <h1 class="logo">Luis <br />O.</h1>
+      <h1 class="logo-mobile">Luis <br /><span class="o-mobile"></span><span class="dot-mobile"></span></h1>
       <div aria-label="Menu Button" class="hamburger" id="hamburger-1">
         <span class="line"></span> <span class="line"></span>
         <span class="line"></span>
@@ -69,9 +69,26 @@
       </div>
     </div>
     <div class="desktop-navbar">
-      <a class="social-btn-desktop">Social</a>
-      <h1 class="logo-desktop">Luis <br />O.</h1>
-      <div class="menu-items-desktop">Menu</div>
+      <div class="social-btn-desktop">Social
+        <div class="hidden-social-menu">
+          <div class="social-items-desktop">
+            <a class="email-btn-desktop" href="mailto:ortizlu@icloud.com" target="_blank">Email</a>
+            <a class="linkedin-btn-desktop" href="https://www.linkedin.com/in/ortizlu/" target="_blank">LinkedIn</a>
+            <a class="github-btn-desktop" href="https://github.com/ortizlu" target="_blank">Github</a>
+          </div>
+        </div>
+      </div>
+
+
+      <h1 class="logo-desktop">Luis <br /><span class="o-desktop"></span><span class="dot-desktop"></span></h1>
+      <div class="menu-btn-desktop">Menu
+        <div class="hidden-menu">
+          <div class="menu-items-desktop">
+            <a class="about-btn-desktop" href="#about">About</a>
+            <a class="projects-btn-desktop" href="#projects">Projects</a>
+          </div>
+        </div>
+      </div>
     </div>
     <h2 class="header-text">
       Hello, I'm Luis Ortiz<br />
@@ -111,7 +128,7 @@
     </div>
     <div class="project-description">
       <h4>
-        <a href="http://ortizlu.com/Space-Dash/" target="_blank">Space-Dash</a>
+        <a class="project-title" href="http://ortizlu.com/Space-Dash/" target="_blank">Space-Dash</a>
       </h4>
       <p>
         A fun card game about the cold war, spaceships, and blowing your
