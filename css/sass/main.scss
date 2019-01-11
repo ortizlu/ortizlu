@@ -44,6 +44,22 @@ body {
 html {
   font-size: 10px;
   scroll-behavior: smooth;
+
+  @include for-tablet-portrait-up {
+    font-size: 12px;
+  }
+
+  @include for-tablet-landscape-up {
+    font-size: 14px;
+  }
+
+  @include for-desktop-up {
+    font-size: 16px;
+  }
+
+  @include for-big-desktop-up {
+    font-size: 18px;
+  }
 }
 
 body {
@@ -499,7 +515,8 @@ header {
   letter-spacing: 0.8px;
 }
 
-.about {
+.about,
+.projects {
   margin: 1.6rem;
 
   @include for-tablet-portrait-up {
@@ -507,7 +524,15 @@ header {
   }
 
   @include for-tablet-landscape-up {
-    padding: 4.8rem;
+    padding: 5.6rem;
+  }
+
+  @include for-desktop-up {
+    padding: 0 25rem;
+  }
+
+  @include for-big-desktop-up {
+    padding: 0 30rem;
   }
 }
 
@@ -534,39 +559,27 @@ header {
   }
 
   @include for-desktop-up {
-    height: 350px;
+    height: 400px;
   }
 
   @include for-big-desktop-up {
-    height: 400px;
+    height: 450px;
   }
 }
 
 .about-description {
   line-height: 1.6;
 
-  @include for-tablet-portrait-up {
-    font-size: 2rem;
+  @include for-desktop-up {
+    line-height: 1.8;
   }
 
-  @include for-tablet-landscape-up {
-    font-size: 2.5rem;
+  @include for-big-desktop-up {
+    line-height: 2;
   }
 }
 
 /* PROJECTS SECTION */
-
-.projects {
-  margin: 1.6rem;
-
-  @include for-tablet-portrait-up {
-    padding: 3.2rem;
-  }
-
-  @include for-tablet-landscape-up {
-    padding: 4.8rem;
-  }
-}
 
 .one {
   background: url('../images/space-dash.png');
@@ -604,11 +617,11 @@ header {
   }
 
   @include for-desktop-up {
-    height: 350px;
+    height: 400px;
   }
 
   @include for-big-desktop-up {
-    height: 400px;
+    height: 450px;
   }
 }
 
@@ -654,14 +667,26 @@ header {
     max-width: 30px;
     max-height: 30px;
     margin: 0 5px;
+
+    @include for-tablet-landscape-up {
+      max-width: 50px;
+      max-height: 50px;
+      margin: 0 10px;
+    }
+
+    @include for-desktop-up {
+      max-width: 70px;
+      max-height: 70px;
+      margin: 0 15px;
+    }
   }
 
-  @include for-tablet-portrait-up {
-    font-size: 2rem;
+  @include for-desktop-up {
+    line-height: 1.8;
   }
 
-  @include for-tablet-landscape-up {
-    font-size: 2.5rem;
+  @include for-big-desktop-up {
+    line-height: 2;
   }
 }
 
