@@ -8,12 +8,12 @@ yearSpan.innerText = year;
 let burger = document.querySelector('.hamburger');
 let closeBtn = document.querySelector('.mobile-overlay .close');
 let mobileOverlay = document.querySelector('.mobile-overlay');
-let menuItems = document.querySelector('.menu-items');
+let menuItemsMobile = document.querySelector('.menu-items-mobile');
 let body = document.querySelector('body');
-let social = document.querySelector('.social-btn');
+let social = document.querySelector('.social-btn-mobile');
 let socialExpanded = document.querySelector('.social-expanded');
-let projectsBtn = document.querySelector('.projects-btn');
-let aboutBtn = document.querySelector('.about-btn');
+let projectsBtn = document.querySelector('.projects-btn-mobile');
+let aboutBtn = document.querySelector('.about-btn-mobile');
 
 //performs close function
 function closeFunc() {
@@ -23,8 +23,8 @@ function closeFunc() {
 
 //performs open function
 function openFunc() {
-  menuItems.style.transform = 'translateX(0%)';
-  menuItems.style.height = '100%';
+  menuItemsMobile.style.transform = 'translateX(0%)';
+  menuItemsMobile.style.height = '100%';
   mobileOverlay.style.width = '100%';
   body.style.overflow = 'hidden';
 }
@@ -32,8 +32,8 @@ function openFunc() {
 //show additional social buttons
 function socialToggle(e) {
   e.preventDefault();
-  menuItems.style.transform = 'translateX(-200%)';
-  menuItems.style.height = '0%';
+  menuItemsMobile.style.transform = 'translateX(-200%)';
+  menuItemsMobile.style.height = '0%';
   socialExpanded.style.transform = 'translateX(0%)';
 }
 

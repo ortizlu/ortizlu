@@ -42,7 +42,8 @@ header {
   height: 100%;
 }
 
-.navbar {
+/* MOBILE NAVBAR */
+.mobile-navbar {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -53,6 +54,11 @@ header {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+}
+@media (min-width: 600px) {
+  .mobile-navbar {
+    display: none;
+  }
 }
 
 .hamburger {
@@ -96,7 +102,7 @@ header {
   border: none;
 }
 
-.menu-items {
+.menu-items-mobile {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -113,13 +119,13 @@ header {
   height: 100%;
   font-size: 3rem;
 }
-.menu-items a {
+.menu-items-mobile a {
   margin: 10px 0;
 }
 
-.social-btn,
-.about-btn,
-.projects-btn {
+.social-btn-mobile,
+.about-btn-mobile,
+.projects-btn-mobile {
   color: #fdfdfd;
   text-align: center;
 }
@@ -153,7 +159,8 @@ header {
   margin: 10px 0;
 }
 
-.logo {
+.logo,
+.logo-desktop {
   font-family: "Poiret One", Arial, Helvetica, sans-serif;
   border: 1px solid #1f1f1f;
   padding: 0.5rem 0.8rem;
@@ -164,6 +171,26 @@ header {
 .logo:active {
   background-color: #1f1f1f;
   color: #fdfdfd;
+}
+
+.desktop-navbar {
+  display: none;
+}
+@media (min-width: 600px) {
+  .desktop-navbar {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.social-btn-desktop {
+  margin-left: 3.2rem;
+}
+
+.menu-items-desktop {
+  margin-right: 3.2rem;
 }
 
 .header-text {

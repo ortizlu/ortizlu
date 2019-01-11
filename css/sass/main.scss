@@ -1,7 +1,6 @@
 $primary: #1f1f1f;
 $whitish: rgb(253, 253, 253);
 
-
 @mixin for-phone-only {
   @media (max-width: 599px) {
     @content;
@@ -59,6 +58,8 @@ a {
   text-decoration: none;
 }
 
+//HEADER STYLES
+
 header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -77,7 +78,9 @@ header {
   height: 100%;
 }
 
-.navbar {
+/* MOBILE NAVBAR */
+
+.mobile-navbar {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -88,6 +91,10 @@ header {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+
+  @include for-tablet-portrait-up {
+    display: none;
+  }
 }
 
 .hamburger {
@@ -133,7 +140,7 @@ header {
   }
 }
 
-.menu-items {
+.menu-items-mobile {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -155,9 +162,9 @@ header {
   }
 }
 
-.social-btn,
-.about-btn,
-.projects-btn {
+.social-btn-mobile,
+.about-btn-mobile,
+.projects-btn-mobile {
   color: $whitish;
   text-align: center;
 }
@@ -192,7 +199,8 @@ header {
   }
 }
 
-.logo {
+.logo,
+.logo-desktop {
   font-family: 'Poiret One', Arial, Helvetica, sans-serif;
   border: 1px solid $primary;
   padding: 0.5rem 0.8rem;
@@ -204,6 +212,28 @@ header {
   background-color: $primary;
   color: $whitish;
 }
+
+//DESKTOP NAVBAR
+
+.desktop-navbar {
+  display: none;
+
+  @include for-tablet-portrait-up {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.social-btn-desktop {
+  margin-left: 3.2rem;
+}
+.menu-items-desktop {
+  margin-right: 3.2rem;
+}
+
+//MAIN HERO
 
 .header-text {
   margin: 1.6rem;
@@ -232,7 +262,7 @@ header {
 
   @-webkit-keyframes underline {
     0% {
-      content: "";
+      content: '';
       width: 0px;
       height: 2px;
       position: absolute;
@@ -289,7 +319,6 @@ header {
   }
 }
 
-
 @keyframes fadeIn {
   0% {
     opacity: 0;
@@ -333,7 +362,6 @@ header {
     height: 300px;
   }
 
-
   @include for-desktop-up {
     height: 350px;
   }
@@ -342,7 +370,6 @@ header {
     height: 400px;
   }
 }
-
 
 .about-description {
   line-height: 1.6;
