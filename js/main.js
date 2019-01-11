@@ -1,4 +1,4 @@
-alert('welcome!');
+// alert('welcome!');
 //update current year for copyright purposes
 let year = new Date().getFullYear().toString();
 let yearSpan = document.querySelector('.year');
