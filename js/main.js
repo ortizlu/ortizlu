@@ -22,6 +22,7 @@ function closeFunc() {
 
 //performs open function
 function openFunc() {
+  alert('test');
   menuItems.style.transform = 'translateX(0%)';
   menuItems.style.height = '100%';
   mobileOverlay.style.width = '100%';
