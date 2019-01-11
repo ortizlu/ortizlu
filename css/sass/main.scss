@@ -501,6 +501,14 @@ header {
 
 .about {
   margin: 1.6rem;
+
+  @include for-tablet-portrait-up {
+    padding: 3.2rem;
+  }
+
+  @include for-tablet-landscape-up {
+    padding: 4.8rem;
+  }
 }
 
 .me-container {
@@ -536,12 +544,28 @@ header {
 
 .about-description {
   line-height: 1.6;
+
+  @include for-tablet-portrait-up {
+    font-size: 2rem;
+  }
+
+  @include for-tablet-landscape-up {
+    font-size: 2.5rem;
+  }
 }
 
 /* PROJECTS SECTION */
 
 .projects {
   margin: 1.6rem;
+
+  @include for-tablet-portrait-up {
+    padding: 3.2rem;
+  }
+
+  @include for-tablet-landscape-up {
+    padding: 4.8rem;
+  }
 }
 
 .one {
@@ -630,6 +654,14 @@ header {
     max-width: 30px;
     max-height: 30px;
     margin: 0 5px;
+  }
+
+  @include for-tablet-portrait-up {
+    font-size: 2rem;
+  }
+
+  @include for-tablet-landscape-up {
+    font-size: 2.5rem;
   }
 }
 
