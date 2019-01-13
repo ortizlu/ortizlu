@@ -181,12 +181,15 @@ header {
 
 .social-btn-mobile,
 .about-btn-mobile,
-.projects-btn-mobile {
+.projects-btn-mobile,
+.resume-btn-mobile {
   color: $whitish;
   text-align: center;
 }
 
 .social-expanded {
+  position: fixed;
+  width: 100%;
   list-style-type: none;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -382,6 +385,10 @@ header {
 }
 
 .projects-btn-desktop {
+  margin: 0.5rem 1rem 0.5rem 1rem;
+}
+
+.resume-btn-desktop {
   margin: 0.5rem 1rem 1rem 1rem;
 }
 
