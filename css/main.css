@@ -472,13 +472,13 @@ header {
 @media (min-width: 1200px) {
   .about,
 .projects {
-    padding: 0 25rem;
+    padding: 0 20rem;
   }
 }
 @media (min-width: 1800px) {
   .about,
 .projects {
-    padding: 0 30rem;
+    padding: 0 25rem;
   }
 }
 
