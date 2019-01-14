@@ -257,7 +257,7 @@ header {
 .hidden-menu {
   position: absolute;
   right: 0;
-  bottom: -8rem;
+  bottom: -11rem;
   visibility: hidden;
 }
 
@@ -467,13 +467,13 @@ header {
 @media (min-width: 600px) {
   .about,
 .projects {
-    padding: 3.2rem;
+    padding: 0 3.2rem;
   }
 }
 @media (min-width: 900px) {
   .about,
 .projects {
-    padding: 5.6rem;
+    padding: 0 5.6rem;
   }
 }
 @media (min-width: 1200px) {
