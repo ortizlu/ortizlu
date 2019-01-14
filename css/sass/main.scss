@@ -31,6 +31,67 @@ $whitish: rgb(253, 253, 253);
   }
 }
 
+@mixin flexbox() {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+@mixin flex-direction-column($direction) {
+  -webkit-box-ortient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: $direction;
+  -moz-flex-direction: $direction;
+  -ms-flex-direction: $direction;
+  flex-direction: $direction;
+}
+
+@mixin justify-content-space-between($justify) {
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  -webkit-justify-content: $justify;
+  -moz-justify-content: $justify;
+  -ms-justify-content: $justify;
+  justify-content: $justify;
+  -ms-flex-pack: $justify;
+}
+
+@mixin align-items($align) {
+  -webkit-box-align: $align;
+  -ms-flex-align: $align;
+  align-items: $align;
+}
+
+@mixin justify-content-flex-end($flexend) {
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: $flexend;
+}
+
+@mixin justify-content-center($center) {
+  -webkit-box-pack: $center;
+  -ms-flex-pack: $center;
+  justify-content: $center;
+}
+
+@mixin transition($trans) {
+  -webkit-transition: $trans;
+  -o-transition: $trans;
+  transition: $trans;
+}
+
+@mixin animation($animate) {
+  -webkit-animation: $animate;
+  animation: $animate;
+}
+
+@mixin margin-block-end($margin) {
+  -webkit-margin-after: $margin;
+  margin-block-end: $margin;
+}
+
 /* HEADER STYLES */
 
 html,
@@ -77,19 +138,10 @@ a {
 //HEADER STYLES
 
 header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  @include flexbox();
+  @include flex-direction-column(column);
+  @include justify-content-space-between(space-between);
+  @include align-items(center);
   width: 100%;
   height: 100%;
 }
@@ -97,16 +149,10 @@ header {
 /* MOBILE NAVBAR */
 
 .mobile-navbar {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  @include flexbox();
   width: 100%;
-  -webkit-box-pack: end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  @include justify-content-flex-end(flex-end);
+  @include align-items(center);
 
   @include for-tablet-portrait-up {
     display: none;
@@ -125,9 +171,7 @@ header {
   height: 1px;
   display: block;
   margin: 8px auto;
-  -webkit-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
+  @include transition(all 0.3s ease-in-out);
 }
 
 .mobile-overlay {
@@ -140,9 +184,7 @@ header {
   background-color: $primary;
   // disable horizontal scroll
   overflow-x: hidden;
-  -webkit-transition: 0.5s;
-  -o-transition: 0.5s;
-  transition: 0.5s;
+  @include transition(0.5s);
 
   .close {
     color: $whitish;
@@ -158,19 +200,10 @@ header {
 }
 
 .menu-items-mobile {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-transition: width 0.3s;
-  -o-transition: width 0.3s;
-  transition: width 0.3s;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+  @include flexbox();
+  @include transition(width 0.3s);
+  @include flex-direction-column(column);
+  @include justify-content-center(center);
   height: 100%;
   font-size: 3rem;
 
@@ -191,26 +224,15 @@ header {
   position: fixed;
   width: 100%;
   list-style-type: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  @include flexbox();
+  @include flex-direction-column(column);
+  @include justify-content-center(center);
+  @include align-items(center);
   -webkit-transform: translateX(200%);
   -ms-transform: translateX(200%);
   transform: translateX(200%);
   height: 100%;
-  -webkit-transition: all 0.4s;
-  -o-transition: all 0.4s;
-  transition: all 0.4s;
+  @include transition(all 0.4s);
 
   a {
     color: white;
@@ -258,10 +280,10 @@ header {
   display: none;
 
   @include for-tablet-portrait-up {
-    display: flex;
+    @include flexbox();
     width: 100%;
-    justify-content: space-between;
-    align-items: center;
+    @include justify-content-space-between(space-between);
+    @include align-items(center);
   }
 }
 
@@ -314,11 +336,11 @@ header {
 
 //display the items inside the menu in flex and position relative so that we can style the triangle
 .menu-items-desktop {
-  display: flex;
-  flex-direction: column;
+  @include flexbox();
+  @include flex-direction-column(column);
   background-color: $primary;
   position: relative;
-  transition: all 0.5s;
+  @include transition(all 0.5s);
 
   a {
     color: $whitish;
@@ -335,17 +357,19 @@ header {
   position: absolute;
   top: -10px;
   right: 0;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
   transform: translateX(-50%);
-  transition: all 0.5s;
+  @include transition(all 0.5s);
   visibility: hidden;
 }
 
 .social-items-desktop {
-  display: flex;
-  flex-direction: column;
+  @include flexbox();
+  @include flex-direction-column(column);
   background-color: $primary;
   position: relative;
-  transition: all 0.5s;
+  @include transition(all 0.5s);
 
   a {
     color: $whitish;
@@ -362,8 +386,10 @@ header {
   position: absolute;
   top: -10px;
   left: 1.6rem;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
   transform: translateX(-50%);
-  transition: all 0.5s;
+  @include transition(all 0.5s);
   visibility: hidden;
 }
 
@@ -442,8 +468,7 @@ header {
     left: 0;
     display: block;
     background: $primary;
-    -webkit-animation: underline 1s 0.5s forwards;
-    animation: underline 1s 0.5s forwards;
+    @include animation(underline 1s 0.5s forwards);
   }
 
   @-webkit-keyframes underline {
@@ -700,19 +725,10 @@ header {
 /* EMAIL CALL TO ACTION */
 
 .email {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  @include flexbox();
+  @include flex-direction-column(column);
+  @include justify-content-center(center);
+  @include align-items(center);
   margin: 1.6rem;
   margin-top: 4.8rem;
   border-top: 1px solid #ded2d2;
@@ -724,8 +740,7 @@ header {
   background-color: $whitish;
   padding: 10px;
   color: $primary;
-  -webkit-margin-after: 1.6rem;
-  margin-block-end: 1.6rem;
+  @include margin-block-end(1.6rem);
 }
 
 .email-btn:hover {
@@ -734,14 +749,8 @@ header {
 }
 
 footer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  @include flexbox();
+  @include justify-content-center(center);
+  @include align-items(center);
   padding: 1.6rem 0 3.2rem 0;
 }
