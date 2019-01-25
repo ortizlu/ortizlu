@@ -146,14 +146,12 @@ header {
   align-items: center;
 }
 
-
 //DESKTOP NAVBAR
 
 .desktop-navbar {
   @include flexbox();
   @include flex-direction-column(column);
   width: 150px;
-
 
   @include for-tablet-portrait-up {
     @include flexbox();
@@ -169,16 +167,15 @@ header {
   border: 4px solid $primary;
   border-radius: 50%;
   padding: 1.5rem 1.2rem;
-  font-size: 2.0rem;
+  font-size: 2rem;
   position: relative;
   align-self: center;
   order: -2;
   margin: 1rem 0;
 
   @include for-tablet-portrait-up {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
-
 }
 
 .logo-o {
@@ -187,8 +184,8 @@ header {
   bottom: -9%;
   right: 0;
   background-color: $whitish;
-  width: 1.0rem;
-  height: 1.0rem;
+  width: 1rem;
+  height: 1rem;
   border-radius: 50%;
   border: 4px solid $primary;
 
@@ -200,7 +197,7 @@ header {
 }
 
 i {
-  font-size: 2.5rem;
+  font-size: 2rem;
 }
 
 .menu {
@@ -245,14 +242,12 @@ i {
   letter-spacing: 0.8px;
   text-align: center;
 
-
   .luis {
-    font-family: "Pacifico", cursive;
+    font-family: 'Pacifico', cursive;
     transform: skewY(-5deg);
     display: block;
     font-size: 5rem;
   }
-
 }
 
 .hello {
@@ -298,7 +293,6 @@ i {
 }
 
 /* MAIN STYLES */
-
 
 .about,
 .projects {
@@ -422,7 +416,6 @@ i {
   }
 }
 
-
 .project:nth-child(even) {
   @include for-tablet-landscape-up {
     text-align: left;
@@ -493,18 +486,21 @@ i {
   @include for-desktop-up {
     width: 600px;
   }
+}
 
+.project-link {
+  width: 100%;
+  height: 100%;
+  display: block;
 }
 
 .project-title {
   letter-spacing: 0.2rem;
   // text-align: center;
-  font-family: "Pacifico", arial, sans-serif;
-
+  font-family: 'Pacifico', arial, sans-serif;
 }
 
 .project {
-
   h4 {
     font-size: 4rem;
     margin: 3rem 0;
@@ -521,7 +517,7 @@ i {
     @include for-tablet-landscape-up {
       margin: 2rem 0;
       font-size: 18px;
-      line-height: 1.6
+      line-height: 1.6;
     }
 
     @include for-desktop-up {
@@ -540,7 +536,6 @@ i {
 }
 
 /* EMAIL CALL TO ACTION */
-
 
 .circle {
   border-radius: 50%;
@@ -561,6 +556,7 @@ i {
 
 .circle-message {
   top: 45%;
+  width: 100%;
   left: 30%;
   transform: translateX(-50%) translateY(-50%);
   color: $primary;
@@ -582,7 +578,6 @@ i {
   right: 0px;
   background-color: white;
 }
-
 
 footer {
   @include flexbox();
