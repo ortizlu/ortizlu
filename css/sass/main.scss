@@ -168,17 +168,17 @@ header {
   font-family: 'Poiret One', Arial, Helvetica, sans-serif;
   border: 4px solid $primary;
   border-radius: 50%;
-  padding: 1.8rem 1.5rem;
-  font-size: 2.5rem;
+  padding: 1.5rem 1.2rem;
+  font-size: 2.0rem;
   position: relative;
   align-self: center;
   order: -2;
   margin: 1rem 0;
 
   @include for-tablet-portrait-up {
-    padding: 1.5rem 1.2rem;
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
+
 }
 
 .logo-o {
@@ -187,22 +187,20 @@ header {
   bottom: -9%;
   right: 0;
   background-color: $whitish;
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 1.0rem;
+  height: 1.0rem;
   border-radius: 50%;
   border: 4px solid $primary;
 
   @include for-tablet-portrait-up {
     bottom: -19%;
+    width: 1.5rem;
+    height: 1.5rem;
   }
 }
 
 i {
-  font-size: 3rem;
-
-  @include for-tablet-portrait-up {
-    font-size: 2.5rem;
-  }
+  font-size: 2.5rem;
 }
 
 .menu {
@@ -349,7 +347,7 @@ i {
 
 .about-description {
   line-height: 1.2;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   margin: 2rem;
   font-weight: 400;
   max-width: 350px;
@@ -379,6 +377,7 @@ i {
 .react-container {
   font-family: 'Roboto', sans-serif;
   color: #61dafb;
+  letter-spacing: -0.01px;
 }
 
 .sass-container {
@@ -561,14 +560,14 @@ i {
 }
 
 .circle-message {
-  top: 30%;
+  top: 45%;
   left: 30%;
   transform: translateX(-50%) translateY(-50%);
   color: $primary;
 }
 
 .circle-email {
-  top: 36%;
+  top: 52%;
   left: -10%;
   color: $primary;
 }
