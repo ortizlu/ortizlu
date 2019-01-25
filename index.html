@@ -24,12 +24,9 @@
   <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
   <meta name="theme-color" content="#ffffff" />
 
-  <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css?family=Antic+Didone" rel="stylesheet" />
-  <link rel="stylesheet" type="text/css" media="screen" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css" />
-  <link rel="stylesheet" href="https://unpkg.com/flickity@2.1.2/dist/flickity.css" />
+  <link href="https://fonts.googleapis.com/css?family=Pacifico|Poiret+One|Roboto:700|Source+Sans+Pro:300,400,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+    crossorigin="anonymous" />
   <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
 
   <!-- google analytics -->
@@ -48,115 +45,142 @@
 
 <body>
   <header>
-    <div class="mobile-navbar">
-      <h1 class="logo-mobile">Luis <br /><span class="o-mobile"></span><span class="dot-mobile"></span></h1>
-      <div aria-label="Menu Button" class="hamburger" id="hamburger-1">
-        <span class="line"></span> <span class="line"></span>
-        <span class="line"></span>
-      </div>
-      <div aria-label="menu" class="mobile-overlay">
-        <button aria-label="Close" class="close">X</button>
-        <div class="menu-items-mobile">
-          <a class="social-btn-mobile">Social</a>
-          <a class="projects-btn-mobile" href="#projects">Projects</a>
-          <a class="about-btn-mobile" href="#about">About</a>
-          <a class="resume-btn-mobile" href="ortizLuisResume.pdf" download>Résumé</a>
-        </div>
-        <div class="social-expanded">
-          <a href="mailto:ortizlu@icloud.com" target="_blank">Email</a>
-          <a href="https://www.linkedin.com/in/ortizlu/" target="_blank">LinkedIn</a>
-          <a href="https://github.com/ortizlu" target="_blank">Github</a>
-        </div>
-      </div>
-    </div>
     <div class="desktop-navbar">
-      <div class="social-btn-desktop">SOCIAL
-        <div class="hidden-social-menu">
-          <div class="social-items-desktop">
-            <a class="email-btn-desktop" href="mailto:ortizlu@icloud.com" target="_blank">Email</a>
-            <a class="linkedin-btn-desktop" href="https://www.linkedin.com/in/ortizlu/" target="_blank">LinkedIn</a>
-            <a class="github-btn-desktop" href="https://github.com/ortizlu" target="_blank">Github</a>
-          </div>
-        </div>
+      <h1 class="logo">Luis<span class="logo-o"></span></h1>
+      <div class="menu">
+        <a class="projects-btn-desktop" href="#projects">WORK</a>
+        <a class="resume-btn-desktop" href="ortizLuisResume.pdf" download>RESUME</a>
       </div>
-
-
-      <h1 class="logo-desktop">Luis <br /><span class="o-desktop"></span><span class="dot-desktop"></span></h1>
-      <div class="menu-btn-desktop">MENU
-        <div class="hidden-menu">
-          <div class="menu-items-desktop">
-            <a class="about-btn-desktop" href="#about">About</a>
-            <a class="projects-btn-desktop" href="#projects">Projects</a>
-            <a class="resume-btn-desktop" href="ortizLuisResume.pdf" download>Résumé</a>
-          </div>
-        </div>
+      <div class="social-menu">
+        <a class="email-btn-desktop" href="mailto:ortizlu@icloud.com" target="_blank"><i class="fas fa-envelope"></i></a>
+        <a class="linkedin-btn-desktop" href="https://www.linkedin.com/in/ortizlu/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a class="github-btn-desktop" href="https://github.com/ortizlu" target="_blank"><i class="fab fa-github-square"></i></a>
       </div>
     </div>
-    <h2 class="header-text">
-      Hello, I'm Luis Ortiz<br />
-      And I am a <span>Full-Stack</span> Web Developer <br />
-    </h2>
-    <a href="#about" class="welcome-btn">Welcome</a>
-  </header>
-  <section class="about">
-    <h3 id="about" class="title"><br />About:</h3>
-    <div class="me-container">
-      <div src=" images/me-landscape.jpg" alt="me next to a brick wall" class="me-landscape"></div>
-    </div>
-    <p class="about-description">
-      I graduated from GMU with a Bachelors in Information Systems. I loved
-      learning about the business-side of technology, but was disappointed
-      with the amount of coding I learned. A few weeks after graduation, I
-      decided to teach myself how to code. Eight months of self-teaching went by, and I decided to
-      embark in General Assembly's Web Development Immersive Program in order to sharpen my skills and to learn
-      how to code in a team.<br><br>
-      After a year into my journey, I decided I am ready to provide incredible work as a developer in the field.
-      I am
-      in
-      search of a Web developer position in
-      the DC area. When I’m not coding, I love spending time with my wife,
-      spending time with friends, playing guitar, reading, and getting a
-      workout at the gym.
-    </p>
-  </section>
-  <section class="projects">
-    <h3 id="projects" class="title"><br />Projects:</h3>
-    <div class="carousel-border">
-      <div class="carousel-container">
-        <div class="main-carousel">
-          <div class="carousel-cell one"></div>
-          <div class="carousel-cell two"></div>
-          <div class="carousel-cell three"></div>
-          <div class="carousel-cell four"></div>
-          <div class="carousel-cell five"></div>
-        </div>
-      </div>
-    </div>
-    <div class="project-description">
-      <h4>
-        <a class="project-title" href="http://ortizlu.com/Space-Dash/" target="_blank">Space-Dash</a>
-      </h4>
-      <p>
-        A fun card game about the cold war, spaceships, and blowing your
-        enemies spaceships up! Made with HTML, CSS, and JS along with a
-        library called Typed.JS. Will soon be refactored to use React.JS.
+    <div class="header-text">
+      <h2>
+        <span class="hello">Hello, I'm</span><span class="luis">Luis Ortiz</span>
+        <span class="full-stack">Full-Stack Web Developer </span>
+      </h2>
+      <p class="about-description">
+        A few weeks after graduating with my Bachelor of Science in Information Systems, I
+        decided to teach myself how to code. Eight months of self-teaching
+        went by, and I decided to embark in General Assembly's Web Development
+        Immersive Program in order to learn development in a team environment. A year into
+        web dev has gone by and I'm just as passionate as I was when I wrote my
+        first "&lt;h1&gt; Hello World &lt;\h1&gt;". I live and breathe Javascript and my current favorite
+        tools are <a target="_blank" href="https://reactjs.org/"><span class="react-container">React </span></a>and
+        <span class="sass-container">SASS<a target="_blank" href="https://sass-lang.com/"><img class="logos" alt="SASS logo"
+              src="logos/sass.svg">.</a></span>
       </p>
-      <h5>Technologies Used:</h5>
-      <div class="technology-container">
-        <img class="technologies" src="logos/react.png" alt="react-logo" />
+    </div>
+    <a href="#projects" class="welcome-btn">&#8595;</a>
+  </header>
+
+  <section class="projects">
+    <h3 id="projects" class="title"><br /></h3>
+
+    <!-- ATEBALL -->
+    <div class="project">
+      <div class="project-info">
+        <h4>
+          <a class="project-title" href="http://ortizlu.com/Space-Dash/" target="_blank">Ate-ball</a>
+        </h4>
+        <div class="technology-container">
+          REACT &#9679; NODE &#9679; MONGO &#9679; YELP & GOOGLE MAPS API
+        </div>
+        <p>
+          This is a project created in collaboration with Juan Baires where we
+          used Yelp and Google Maps' API in order to end dinner-deciding feuds
+          everywhere. A user puts in three favorite foods along with their
+          significant other, and the magic Ateball magically chooses where they
+          should eat according to their favorite foods/location.
+        </p>
       </div>
+      <div class="project-img five"></div>
+    </div>
+
+    <!-- WOW-ISS -->
+    <div class="project">
+      <div class="project-info">
+        <h4>
+          <a class="project-title" href="http://ortizlu.com/Space-Dash/" target="_blank">Wow-Iss</a>
+        </h4>
+        <div class="technology-container">
+          REACT &#9679; NODE &#9679; MONGO &#9679; GOOGLE MAPS API
+        </div>
+        <p>
+          This is a project created in collaboration with Nick Tartaro where we
+          used the International Space Station's and Google Maps' API in order
+          to track the current location of the ISS. Users can log in, add their
+          favorite locations, and see how far the ISS is is from their saved
+          locations.
+        </p>
+      </div>
+      <div class="project-img four"></div>
+    </div>
+
+    <!-- CHEE-YUN -->
+    <div class="project">
+      <div class="project-info">
+        <h4>
+          <a class="project-title" href="http://ortizlu.com/Space-Dash/" target="_blank">Chee-Yun</a>
+        </h4>
+        <div class="technology-container">
+          HTML &#9679; BOOTSTRAP &#9679; JQUERY
+        </div>
+        <p>This is a website created for world-renowned violinist Chee-Yun.</p>
+      </div>
+      <div class="project-img three"></div>
+    </div>
+
+    <!-- STAGEBRIGHT -->
+    <div class="project">
+      <div class="project-info">
+        <h4>
+          <a class="project-title" href="http://ortizlu.com/Space-Dash/" target="_blank">Stagebright</a>
+        </h4>
+        <div class="technology-container">
+          NODE &#9679; AWS S3 &#9679; MONGO
+        </div>
+        <p>
+          StageBright is a full-screen "instagram-like" hub where users can
+          upload pictures (or other media planned for a future release) and see
+          other people's work in their feed. It is built with the MEHN stack and
+          soon to be refactored to use Vue.js for the front-end.
+        </p>
+      </div>
+
+      <div class="project-img two"></div>
+    </div>
+
+    <!-- Space-Dash -->
+    <div class="project">
+      <div class="project-info">
+        <h4>
+          <a class="project-title" href="http://ortizlu.com/Space-Dash/" target="_blank">Space-Dash</a>
+        </h4>
+        <div class="technology-container">
+          HTML &#9679; CSS &#9679; JAVASCRIPT
+        </div>
+        <p>
+          A fun card game about the cold war, spaceships, and blowing your
+          enemies spaceships up! Made with HTML, CSS, and JS along with a
+          library called Typed.JS. Will soon be refactored to use React.JS.
+        </p>
+      </div>
+      <div class="project-img one"></div>
     </div>
   </section>
+  <div class="circle">
+    <p class="circle-message text">work with me.</p>
+    <p class="circle-email text">ortizlu@icloud.com</p>
+    <div class="small-circle"></div>
+  </div>
 
-  <section class="email">
-    <h3 class="email-title">Interested in working together?</h3>
-    <a target="_blank" href="mailto:ortizlu@icloud.com" class="email-btn">Email Me</a>
-  </section>
   <footer>
-    Copyright &copy; &nbsp;<span class="year">2018</span>&nbsp; Luis Ortiz.
+    Luis Ortiz | Copyright &nbsp; <span class="year">2018</span>
   </footer>
-  <script src="https://unpkg.com/flickity@2.1.2/dist/flickity.pkgd.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
   <script src="js/main.js"></script>
 </body>
 

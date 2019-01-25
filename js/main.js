@@ -5,89 +5,64 @@ let yearSpan = document.querySelector('.year');
 yearSpan.innerText = year;
 
 //MOBILE NAVBAR
-let burger = document.querySelector('.hamburger');
-let closeBtn = document.querySelector('.mobile-overlay .close');
-let mobileOverlay = document.querySelector('.mobile-overlay');
-let menuItemsMobile = document.querySelector('.menu-items-mobile');
-let body = document.querySelector('body');
-let social = document.querySelector('.social-btn-mobile');
-let socialExpanded = document.querySelector('.social-expanded');
-let projectsBtn = document.querySelector('.projects-btn-mobile');
-let aboutBtn = document.querySelector('.about-btn-mobile');
+// let burger = document.querySelector('.hamburger');
+// let closeBtn = document.querySelector('.mobile-overlay .close');
+// let mobileOverlay = document.querySelector('.mobile-overlay');
+// let menuItemsMobile = document.querySelector('.menu-items-mobile');
+// let body = document.querySelector('body');
+// let social = document.querySelector('.social-btn-mobile');
+// let socialExpanded = document.querySelector('.social-expanded');
+// let projectsBtn = document.querySelector('.projects-btn-mobile');
+// let aboutBtn = document.querySelector('.about-btn-mobile');
 
 //performs close function
-function closeFunc() {
-  mobileOverlay.style.width = '0%';
-  body.style.overflow = 'visible';
-}
+// function closeFunc() {
+//   mobileOverlay.style.width = '0%';
+//   body.style.overflow = 'visible';
+// }
 
 //performs open function
-function openFunc() {
-  menuItemsMobile.style.transform = 'translateX(0%)';
-  menuItemsMobile.style.height = '100%';
-  mobileOverlay.style.width = '100%';
-  body.style.overflow = 'hidden';
-}
+// function openFunc() {
+//   menuItemsMobile.style.transform = 'translateX(0%)';
+//   menuItemsMobile.style.height = '100%';
+//   mobileOverlay.style.width = '100%';
+//   body.style.overflow = 'hidden';
+// }
 
 //show additional social buttons
-function socialToggle(e) {
-  e.preventDefault();
-  menuItemsMobile.style.transform = 'translateX(-200%)';
-  menuItemsMobile.style.height = '0%';
-  socialExpanded.style.transform = 'translateX(0%)';
-}
+// function socialToggle(e) {
+//   e.preventDefault();
+//   menuItemsMobile.style.transform = 'translateX(-200%)';
+//   menuItemsMobile.style.height = '0%';
+//   socialExpanded.style.transform = 'translateX(0%)';
+// }
 
 //on click of hamburger, menu pops from the side
-burger.addEventListener('click', openFunc);
+// burger.addEventListener('click', openFunc);
 
 //close menu upon clicking the projects/about button
-projectsBtn.addEventListener('click', closeFunc);
-aboutBtn.addEventListener('click', closeFunc);
+// projectsBtn.addEventListener('click', closeFunc);
+// aboutBtn.addEventListener('click', closeFunc);
 
 //clicking the X button
-closeBtn.addEventListener('click', closeFunc);
+// closeBtn.addEventListener('click', closeFunc);
 
 //clicking on social button
-social.addEventListener('click', socialToggle);
+// social.addEventListener('click', socialToggle);
 
 //swiping to social instead of clicking the button
-let swipeToSocial = new Hammer(social);
-swipeToSocial.on('panleft', function(ev) {
-  socialToggle(ev);
-});
+// let swipeToSocial = new Hammer(social);
+// swipeToSocial.on('panleft', function(ev) {
+//   socialToggle(ev);
+// });
 
 //swiping back to the menu
-let swipeFromSocial = new Hammer(socialExpanded);
-swipeFromSocial.on('panright', function(ev) {
-  openFunc();
-});
+// let swipeFromSocial = new Hammer(socialExpanded);
+// swipeFromSocial.on('panright', function(ev) {
+//   openFunc();
+// });
 
 // CAROUSEL
-
-//VARIABLES THAT CHANGE PROJECT DESCRIPTION
-let projectTitle = document.querySelector('.project-description h4');
-let projectDescription = document.querySelector('.project-description p');
-let technologyContainer = document.querySelector('.technology-container');
-
-var elem = document.querySelector('.main-carousel');
-var flkty = new Flickity(elem, {
-  // options
-  cellAlign: 'left',
-  contain: true
-});
-
-// element argument can be a selector string
-//   for an individual element
-var flkty = new Flickity('.main-carousel', {
-  on: {
-    ready: function() {
-      console.log('Flickity is ready');
-    },
-    change: function(index) {
-      console.log('Slide changed to' + index);
-    }
-  }
-});
 
 let projectsObj = [
   {
@@ -204,28 +179,3 @@ let projectsObj = [
     ]
   }
 ];
-
-function displayProjectInfo(index) {
-  projectTitle.innerHTML = projectsObj[index].title;
-  projectDescription.innerHTML = projectsObj[index].description;
-  technologyContainer.innerHTML = '';
-  projectsObj[index].images.map(logo => {
-    let el = document.createElement('img');
-    el.setAttribute('alt', logo.alt);
-    el.setAttribute('src', 'logos/' + logo.src);
-    el.classList.add('technologies');
-    technologyContainer.appendChild(el);
-  });
-}
-
-function takeMeToLink(index) {
-  window.open(projectsObj[index].link, '_blank');
-}
-
-flkty.on('change', function(index) {
-  displayProjectInfo(index);
-});
-
-flkty.on('staticClick', (e, p, el, index) => {
-  takeMeToLink(index);
-});
