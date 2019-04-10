@@ -321,6 +321,10 @@ i {
   bottom: -7px;
 }
 
+.title-color {
+  color: rgb(0, 161, 218);
+}
+
 .sass-container {
   color: #fdfdfd;
   position: relative;
