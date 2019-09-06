@@ -337,17 +337,6 @@ i {
   }
 }
 
-.drupal.logos {
-  bottom: 2px;
-  left: 50%;
-}
-@media (min-width: 1150px) {
-  .drupal.logos {
-    width: 59px;
-    height: 20px;
-  }
-}
-
 /* PROJECTS SECTION */
 .project {
   text-align: center;
