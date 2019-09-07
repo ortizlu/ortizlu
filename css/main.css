@@ -57,6 +57,12 @@ header {
   align-items: center;
 }
 
+video {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
 .desktop-navbar {
   display: -webkit-box;
   display: -moz-box;
@@ -113,6 +119,12 @@ i {
   font-size: 2rem;
 }
 
+i:hover,
+i:active,
+i:focus {
+  color: rgb(0, 161, 218);
+}
+
 .menu {
   display: flex;
   justify-content: space-between;
@@ -127,6 +139,16 @@ i {
     justify-content: flex-start;
     margin-top: 0;
   }
+}
+
+.projects-btn-desktop:hover,
+.projects-btn-desktop:active,
+.projects-btn-desktop:focus,
+.resume-btn-desktop:hover,
+.resume-btn-desktop:active,
+.resume-btn-desktop:focus {
+  color: rgb(0, 161, 218);
+
 }
 
 @media (min-width: 600px) {
@@ -179,10 +201,13 @@ i {
   color: #1f1f1f;
   padding: 10px;
   font-size: 3rem;
+  border-radius: 3px;
+  transition: all 0.4s;
 }
 
 .welcome-btn:hover,
-.welcome-btn:active {
+.welcome-btn:active,
+.welcome-btn:focus {
   background-color: #1f1f1f;
   color: #fdfdfd;
 }
@@ -308,11 +333,23 @@ i {
   font-family: "Roboto", sans-serif;
   color: #61dafb;
   letter-spacing: -0.01px;
+  font-size: 1.2rem;
+}
+
+.react-container:hover {
+  color: #47a3bc;
 }
 
 
 .bwm-container {
   color: rgb(42, 101, 122);
+  font-size: 1.2rem;
+}
+
+.bwm-container:hover,
+.bwm-container:active,
+.bwm-container:focus {
+  color: rgb(0, 161, 218);
 }
 
 .bwm {
@@ -328,6 +365,10 @@ i {
 .sass-container {
   color: #fdfdfd;
   position: relative;
+}
+
+.sass-container a {
+  color: transparent;
 }
 
 
@@ -362,10 +403,17 @@ i {
   left: 50%;
 }
 
+.logos.drupal:hover,
+.logos.drupal:focus,
+.logos.drupal:active {
+  -webkit-filter: hue-rotate(106deg);
+  filter: hue-rotate(106deg);
+}
+
 @media (min-width: 1150px) {
   .logos.drupal {
     width: 60px;
-    height: 20px;
+    height: 17px;
   }
 }
 
@@ -379,7 +427,7 @@ i {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 200px auto;
+    margin: 75px auto;
     max-width: 1024px;
   }
 }
@@ -403,6 +451,17 @@ i {
   }
 }
 
+@media (min-width: 900px) {
+  .project-info.odd {
+    padding-right: 40px;
+  }
+
+  .project-info.even {
+    padding-left: 40px;
+  }
+}
+
+
 .project-info {
   max-width: 500px;
   margin: 4rem auto;
@@ -421,47 +480,24 @@ i {
   }
 }
 
-.one {
-  background: url("../images/space-dash.png");
-}
-
-.two {
-  background: url("../images/stagebright.png");
-}
-
-.three {
-  background: url("../images/chee-yun.png");
-}
-
-.four {
-  background: url("../images/wow-iss.png");
-}
-
-.five {
-  background: url("../images/ateball.png");
-}
-
 .project-img {
   position: relative;
-  width: 250px;
+  width: 100%;
   box-shadow: 0px 3px 20px 0px #1f1f1f;
-  background-size: cover;
+  background-size: contain;
   background-position: center center;
-  height: 250px;
   margin: 0 auto;
 }
 
 @media (min-width: 600px) {
   .project-img {
     width: 500px;
-    height: 350px;
   }
 }
 
 @media (min-width: 900px) {
   .project-img {
     width: 400px;
-    height: 400px;
     margin: 0;
   }
 }
@@ -481,6 +517,7 @@ i {
 .project-title {
   letter-spacing: 0.2rem;
   font-family: "Pacifico", arial, sans-serif;
+  line-height: 1.2;
 }
 
 .project h4 {
@@ -492,6 +529,16 @@ i {
   .project h4 {
     margin: 2rem 0;
   }
+}
+
+.proj-link {
+  color: rgb(0, 161, 218);
+}
+
+.proj-link:hover,
+.proj-link:active,
+.proj-link:focus {
+  color: rgb(42, 101, 122);
 }
 
 .project p {
@@ -522,6 +569,61 @@ i {
   .project {
     line-height: 2;
   }
+}
+
+.screenshot {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.5s;
+  z-index: 2;
+  opacity: 1;
+}
+
+.screenshot:hover,
+.screenshot:focus {
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+.project.last {
+  margin-bottom: 3rem;
+}
+
+.other-projects {
+  margin: 6rem auto 0 auto;
+  text-align: center;
+}
+
+@media screen and (min-width: 900px) {
+  .other-projects {
+    margin: 3rem auto 0 auto;
+  }
+}
+
+.title {
+  letter-spacing: 0.2rem;
+  font-family: "Pacifico", arial, sans-serif;
+  line-height: 1.2;
+  font-size: 2rem;
+}
+
+.list {
+  margin-top: 2rem;
+  color: rgb(42, 101, 122);
+}
+
+.o-project {
+  font-weight: 700;
+  color: rgb(0, 0, 0);
+}
+
+.o-project:hover,
+.o-project:active,
+.o-project:focus {
+  color: rgb(0, 161, 218);
 }
 
 /* EMAIL CALL TO ACTION */
