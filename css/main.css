@@ -647,9 +647,9 @@ i:focus {
 
 .circle-message {
   top: 45%;
-  width: 130%;
+  width: 100%;
   z-index: 2;
-  left: 30%;
+  left: 28%;
   transform: translateX(-50%) translateY(-50%);
   color: #1f1f1f;
 }
