@@ -613,6 +613,7 @@ i:focus {
 .list {
   margin-top: 2rem;
   color: rgb(42, 101, 122);
+  line-height: 1.5;
 }
 
 .o-project {
