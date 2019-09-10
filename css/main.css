@@ -63,6 +63,27 @@ video {
   display: block;
 }
 
+h5 {
+  text-align: center;
+  margin-top: 1rem;
+  font-family: "Poiret One", Arial, Helvetica, sans-serif;
+  font-size: 1em;
+}
+
+h5:before {
+  content: "Tap Me"
+}
+
+@media screen and (min-width: 900px) {
+  h5 {
+    font-size: 0.8em;
+  }
+
+  h5:before {
+    content: 'Hover Me'
+  }
+}
+
 .desktop-navbar {
   display: -webkit-box;
   display: -moz-box;
