@@ -71,7 +71,7 @@ h5 {
 }
 
 h5:before {
-  content: "Tap Me"
+  content: "(Tap Me)"
 }
 
 @media screen and (min-width: 900px) {
@@ -80,7 +80,7 @@ h5:before {
   }
 
   h5:before {
-    content: 'Hover Me'
+    content: '(Hover Me)'
   }
 }
 
@@ -633,7 +633,6 @@ i:focus {
 
 .list {
   margin-top: 2rem;
-  color: rgb(42, 101, 122);
   line-height: 1.5;
 }
 
